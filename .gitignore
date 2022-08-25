@@ -1,2 +1,3 @@
-.sh
-cmake-build-debug/
+*.sh
+/cmake-build-debug/
+/.idea/
