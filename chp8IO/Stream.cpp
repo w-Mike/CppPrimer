@@ -10,8 +10,6 @@ using std::cout; using std::cin; using std::endl;
 
 // 接受一个 istream&参数，返回值类型也是istream&, 必须从给定流中读取数据，打印到标准输出上
 std::istream& TestIstream(std::istream& is){
-
-
     int str;
     while(is >> str){
         cout << str << endl;
@@ -23,7 +21,6 @@ std::istream& TestIstream(std::istream& is){
 
     // is.clear(is.eofbit);     2   由此 eofbit在0010位
     // std::cout << is.rdstate() << endl;
-
     return is;
 }
 void StreamTest()

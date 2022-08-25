@@ -7,8 +7,7 @@ using std::string;
 
 #include <vector>
 using std::vector;
-
 int main(){
-
+    StreamTest();
     return 1;
 }
