@@ -4,9 +4,14 @@
     -iostream   -fstream    -sstream
 */
 #include <iostream>
-
-#include <string>
 using std::cout; using std::cin; using std::endl;
+#include <fstream>
+using std::ifstream; using std::ofstream;
+#include <string>
+using std::string;
+
+#include<unistd.h>
+
 
 // 接受一个 istream&参数，返回值类型也是istream&, 必须从给定流中读取数据，打印到标准输出上
 std::istream& TestIstream(std::istream& is){
@@ -23,8 +28,23 @@ std::istream& TestIstream(std::istream& is){
     // std::cout << is.rdstate() << endl;
     return is;
 }
+
+void Fstream(){
+    char *cwd = new char(50);
+    getcwd(cwd, 50);
+    string path(cwd);
+
+    ifstream in(path);
+    in.open(path + "/fstream.txt");
+    if(in.is_open()){
+        cout << "opened!!" << endl;
+        in.close();
+    }else   cout << "failed!" <<endl;
+}
 void StreamTest()
 {
-    std::istream& input = TestIstream(std::cin);
-    std::cout << input.rdstate() << endl;       
+    // func: TestIstream()
+    // std::istream& input = TestIstream(std::cin);
+    // std::cout << input.rdstate() << endl;     
+    Fstream();
 }
