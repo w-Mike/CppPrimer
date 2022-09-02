@@ -14,17 +14,18 @@ using std::string;
 using std::ifstream;
 using std::ofstream;
 
-string getTestData()
+#include "func.h"
+
+ifstream& getTestData()
 {
     ifstream ifs("../../data/test.txt");
-    string buff;
-    getline(ifs, buff);
-    // 返回一行数据
-    return buff;
-}
 
+    // 返回 ifs
+    return ifs;
+}
 int main()
 {
-    string testData = getTestData();
+    ifstream& ifs = getTestData();
+
     return 1;
 }
