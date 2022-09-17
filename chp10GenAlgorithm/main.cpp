@@ -2,6 +2,8 @@
 /*
 
 */
+#include "func.h"
+
 #include <iostream>
 using std::cin;
 using std::cout;
@@ -14,12 +16,12 @@ using std::string;
 using std::ifstream;
 using std::ofstream;
 
-#include "func.h"
-
 int main()
 {
-    ifstream ifs("../../data/test.txt");
+    //   test();
+    int a, b;
+    cin >> a >> b;
+    cout << a << b << endl;
 
-    vectorTest(ifs);
     return 1;
 }

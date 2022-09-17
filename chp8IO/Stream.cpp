@@ -7,10 +7,17 @@
 /*
 总结： 理解 IO流的概念的关键就是：
     清楚每个流对象 从 <哪里> 读取,写入 <哪里> -- (其实从语句中的>> << 符号的方向就可以简单理解)
-(istream对象)cin 从 <命令行> 读取， 写入<变量>        (命令行 >> cin) >> variable;
-       cout 从 <变量> 读取，写入<命令行>        (命令行<< cout) << variable;
+    <变量>指 普通变量/字符串字面量
 
-       ifstream对象 从 <文件> 读取， 写入 <变量> 
+        (istream对象)
+        cin 从 <命令行> 读取， 写入<变量>        (命令行 >> cin) >> variable;
+        cout 从 <变量> 读取，写入<命令行>        (命令行<< cout) << variable;
+
+        ifstream对象 从 <文件> 读取， 写入 <变量>    (文件 >> ifstream) >> variable
+        ofstream对象 从 <变量> 读取， 写入 <文件>    (文件 << ofstream) << variable
+
+        istringstream对象 从 <字符串对象> 读取, 写入 <变量> (字符串 >> istringstream >> 变量)
+        ostringstream对象 从 <变量> 读取,  写入 <oss的字符串成员变量> (oss.str() << oss << 变量)
 */
 #include <iostream>
 using std::cin;

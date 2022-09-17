@@ -14,12 +14,6 @@ using std::string;
 using std::ifstream;
 using std::ofstream;
 
-#include "func.h"
+int lambdaTest(){
 
-int main()
-{
-    ifstream ifs("../../data/test.txt");
-
-    vectorTest(ifs);
-    return 1;
 }

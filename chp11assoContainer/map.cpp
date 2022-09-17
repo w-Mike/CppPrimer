@@ -1,7 +1,3 @@
-// C++ primer: page
-/*
-
-*/
 #include <iostream>
 using std::cin;
 using std::cout;
@@ -14,12 +10,9 @@ using std::string;
 using std::ifstream;
 using std::ofstream;
 
-#include "func.h"
-
+void test();
 int main()
 {
-    ifstream ifs("../../data/test.txt");
-
-    vectorTest(ifs);
+    test();
     return 1;
 }
