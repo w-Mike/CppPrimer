@@ -16,7 +16,6 @@ using std::string;
 using std::ifstream;
 using std::ofstream;
 
-void test();
 int main()
 {
     test();
